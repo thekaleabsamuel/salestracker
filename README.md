@@ -2,9 +2,32 @@
 
 A powerful internal web tool designed to help users quickly locate and organize local business information by industry and location. Powered by the Google Places API, this tool allows users to search for businesses within a specified radius and export results for reporting or outreach purposes.
 
-## 🚀 New Here?
+## 👋 For Your Coworker - Quick Start
 
-**Start with `README_FIRST.md` for a quick 5-minute setup!**
+**The API key is already configured!** Just follow these steps:
+
+1. **Clone the repository**
+2. **Install dependencies**:
+   ```bash
+   npm install
+   cd server && npm install && cd ..
+   ```
+3. **Start the backend** (Terminal 1):
+   ```bash
+   cd server
+   npm start
+   ```
+4. **Start the frontend** (Terminal 2):
+   ```bash
+   npm run dev
+   ```
+5. **Open your browser**: http://localhost:5173
+
+**That's it!** The API key is already in the repo, so you're ready to go! 🎉
+
+---
+
+**For detailed setup instructions, see `README_FIRST.md`**
 
 ## 🚀 Features
 
