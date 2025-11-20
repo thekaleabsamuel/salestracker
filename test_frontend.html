@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend API Test</title>
+</head>
+<body>
+    <h1>Frontend API Test</h1>
+    <div id="results"></div>
+    
+    <script>
+        async function testAPI() {
+            const resultsDiv = document.getElementById('results');
+            
+            try {
+                console.log('Testing API call...');
+                
+                const response = await fetch('http://localhost:3001/api/search-businesses', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        keyword: 'restaurant',
+                        location: '80202',
+                        radius: 10
+                    })
+                });
+                
+                console.log('Response status:', response.status);
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log('API call successful:', data);
+                    resultsDiv.innerHTML = `
+                        <h2>✅ API Test Successful!</h2>
+                        <p>Found ${data.businesses.length} businesses</p>
+                        <ul>
+                            ${data.businesses.slice(0, 5).map(business => 
+                                `<li>${business.name} - ${business.formatted_address}</li>`
+                            ).join('')}
+                        </ul>
+                    `;
+                } else {
+                    const errorData = await response.json();
+                    console.error('API call failed:', errorData);
+                    resultsDiv.innerHTML = `
+                        <h2>❌ API Test Failed</h2>
+                        <p>Status: ${response.status}</p>
+                        <p>Error: ${errorData.error || 'Unknown error'}</p>
+                    `;
+                }
+            } catch (error) {
+                console.error('Network error:', error);
+                resultsDiv.innerHTML = `
+                    <h2>❌ Network Error</h2>
+                    <p>Error: ${error.message}</p>
+                `;
+            }
+        }
+        
+        // Run test when page loads
+        window.addEventListener('load', testAPI);
+    </script>
+</body>
+</html>
+
+

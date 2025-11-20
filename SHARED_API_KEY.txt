@@ -1,0 +1,20 @@
+# 🔑 API Key for Team Use
+
+## For Team Lead:
+
+1. Open `server/.env` 
+2. Find the line: `GOOGLE_PLACES_API_KEY=YOUR_API_KEY_HERE`
+3. Replace `YOUR_API_KEY_HERE` with your actual API key
+4. Save the file
+5. Commit and push - the `.env` file will be included in the repo (private repo)
+
+---
+
+## Google Places API Key:
+
+PASTE_YOUR_API_KEY_HERE
+
+---
+
+**Note**: Since this is a private repo, the `.env` files are committed directly. Your teammate just needs to clone and run - no setup needed!
+
