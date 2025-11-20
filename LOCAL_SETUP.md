@@ -74,16 +74,21 @@ The default value (`http://localhost:3001/api`) is already correct for local dev
 
 #### Backend Environment Variables
 
-**The API key should already be in `server/.env` when you clone the repo!**
+**You need to set up your own Google Places API key:**
 
-If you need to update it:
+1. **Set up your API key** (see `SETUP_NEW_API_KEY.md` for detailed instructions):
+   - Go to https://console.cloud.google.com/
+   - Enable "Places API (New)"
+   - Create an API key
+   - Set up billing (required, but you get $200/month free)
 
-1. **Open `server/.env`** in a text editor
-2. **Find the line**: `GOOGLE_PLACES_API_KEY=YOUR_API_KEY_HERE`
-3. **Replace `YOUR_API_KEY_HERE`** with the actual API key
-4. **Save the file**
+2. **Add it to `server/.env`**:
+   - Open `server/.env` in a text editor
+   - Find: `GOOGLE_PLACES_API_KEY=YOUR_API_KEY_HERE`
+   - Replace `YOUR_API_KEY_HERE` with your actual API key
+   - Save the file
 
-**Note**: Since this is a private repo, the `.env` files are committed directly. You usually won't need to change anything!
+**Note**: Each person needs their own API key. It's free to set up and you get $200/month in free credits!
 
 ### Step 5: Start the Backend Server
 

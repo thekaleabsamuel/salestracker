@@ -12,43 +12,41 @@ Your project is now **plug-and-play ready** for your coworker! Here's what I've 
 4. **`API_KEY_SETUP.md`** - Detailed API key instructions
 5. **`LOCAL_SETUP.md`** - Comprehensive setup guide
 
-### 🔑 Adding Your API Key
+### 🔑 API Key Setup
 
-**Super Easy - Just Edit the File:**
+**Each person needs their own API key** (it's free with $200/month credit):
 
-1. Open `server/.env` in a text editor
-2. Find: `GOOGLE_PLACES_API_KEY=YOUR_API_KEY_HERE`
-3. Replace `YOUR_API_KEY_HERE` with your actual Google Places API key
-4. Save the file
-5. Commit and push - that's it!
+- You can set up your own API key following `SETUP_NEW_API_KEY.md`
+- Your coworker will set up their own API key when they clone the repo
+- This way everyone has their own $200/month free credit
 
-**Your coworker won't need to do anything** - the API key will already be in the repo when they clone it!
+**No need to share API keys** - each person sets up their own!
 
 ### 📋 What Your Coworker Needs to Do
 
 1. Clone the repo from GitHub
 2. Run `npm install` and `cd server && npm install`
-3. Start both servers
+3. Set up their own Google Places API key (see `SETUP_NEW_API_KEY.md`)
+4. Add their API key to `server/.env`
+5. Start both servers
 
-**That's it!** The API key is already in the repo - no setup needed!
+**That's it!** Each person uses their own API key with their own $200/month free credit.
 
 ### 🚀 Next Steps
 
-1. **Add your API key to `server/.env`**:
-   - Open `server/.env`
-   - Replace `YOUR_API_KEY_HERE` with your actual Google Places API key
-   - Save the file
-
-2. **Push to GitHub**:
+1. **Push to GitHub** (if you haven't already):
    ```bash
    git add .
-   git commit -m "Add API key and setup files"
+   git commit -m "Add setup files and documentation"
    git push
    ```
 
-3. **Share the repo** with your coworker
+2. **Share the repo** with your coworker
 
-4. **Tell them**: "Just clone, run `npm install`, and start the servers!"
+3. **Tell them**: 
+   - "Clone the repo and follow `README_FIRST.md`"
+   - "You'll need to set up your own Google Places API key (see `SETUP_NEW_API_KEY.md`)"
+   - "It's free with $200/month credit!"
 
 ### 📝 Files Created/Updated
 
@@ -62,9 +60,10 @@ Your project is now **plug-and-play ready** for your coworker! Here's what I've 
 
 ### 🔒 Security Note
 
-- `.env` files are **committed to the repo** (removed from `.gitignore`)
-- This is safe because the repository is **private**
-- Your coworker will have the API key automatically when they clone
+- Each person sets up their own API key
+- The `server/.env` file has a placeholder (`YOUR_API_KEY_HERE`)
+- Your coworker will replace it with their own key
+- This way everyone has their own $200/month free credit from Google
 
 ---
 

@@ -21,17 +21,19 @@ The `.env` files are already in the repo with default values. You can skip this 
 **If you need to update the API key:**
 - Edit `server/.env` and replace `YOUR_API_KEY_HERE` with the actual key
 
-### Step 3: Verify API Key (Usually Already Set!)
+### Step 3: Set Up Your Google Places API Key
 
-The API key should already be in `server/.env` when you clone the repo!
+You need to set up your own Google Places API key (it's free with $200/month credit):
 
-**If it's not set:**
-1. Open `server/.env` in a text editor
-2. Find: `GOOGLE_PLACES_API_KEY=YOUR_API_KEY_HERE`
-3. Replace `YOUR_API_KEY_HERE` with the actual API key
-4. Save the file
+1. **Follow the guide**: See `SETUP_NEW_API_KEY.md` for step-by-step instructions
+2. **Get your API key** from Google Cloud Console
+3. **Add it to the project**:
+   - Open `server/.env` in a text editor
+   - Find: `GOOGLE_PLACES_API_KEY=YOUR_API_KEY_HERE`
+   - Replace `YOUR_API_KEY_HERE` with your actual API key
+   - Save the file
 
-**Most likely, you can skip this step!** The key is already configured.
+**Quick setup**: Go to https://console.cloud.google.com/ → Enable "Places API (New)" → Create API key → Add to `server/.env`
 
 ### Step 4: Start the App
 
